@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="Description" content="">
+    <meta name="Keywords" content="">
+    <title>实现滚动容器</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body,
+        html {
+            height: 100%;
+            text-align: center;
+        }
+        body::after{
+            content:'';
+            height:100%;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        #father {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            overflow: hidden;
+        }
+        #grandfather{
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .son {
+            height: 200px;
+            width: 300px;
+        }
+
+        #son {
+            position: relative;
+            width: 300px;
+            height: 50px;
+            text-align: center;
+            border: 1px dashed silver;
+        }
+        a {
+            text-decoration: none;
+            line-height:50px;
+            margin:0 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id = "grandfather">
+        <div id="father">
+            <div class="son" id="red" style="background: red"></div>
+            <div class="son" id="blue" style="background: blue"></div>
+            <div class="son" id="green" style="background: green"></div>
+            <div class="son" id="black" style="background: black"></div>
+            <div class="son" id="silver" style="background: silver"></div>
+        </div>
+        <div id="son">
+            <a href="#red">red</a>
+            <a href="#blue">blue</a>
+            <a href="#green">green</a>
+            <a href="#black">black</a>
+            <a href="#silver">silver</a>
+        </div>
+    </div>
+</body>
+
+</html>
